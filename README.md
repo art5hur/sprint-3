@@ -1,40 +1,14 @@
-# MVC RH
+# SPRINT 3
+Aplicação em MVC da plataforma de treinamentos da Eurofarma (EUROLEARN)
 
-Aplicação MVC de Recursos Humanos para fins didáticos
+## Features
+- Dashboard principal (Colaboradores)
+- Dashboard RH
+- Cadastro de Treinamentos
+- Cadastro de Funcionários
+- Cadastro de Departamentos
 
-## Setup e Uso
-
-### Execução / Local dev
-
-#### Terminal
-
-```sh
-./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
-```
-
-#### [H2 Web UI](http://localhost:8080/h2-console)
-
-> - *url*: jdbc:h2:mem:testdb
-> - *usuário*: sa
-> - *senha*: password
-
-![](assets/images/h2-console.png)
-
-## Arquitetura
-
-### MER
-
-![](assets/docs/src/mer/mer.svg)
-
-## Java
-
-> [Spring Initializr](https://start.spring.io/) - Criar aplicação conforme a configuração 
-
-### Spring Boot - Configuração
-
-![](assets/images/spring.png)
-
-## Referencias
-
- - https://spring.io/projects/spring-framework
- - https://plantuml.com/# sprint-3
+## Integrantes
+- Arthur Miranda Santos
+- Renan Bandeira Leite
+- Thomas D’ávila Meyer Pflug
