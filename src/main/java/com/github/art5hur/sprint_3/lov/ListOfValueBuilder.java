@@ -1,5 +1,6 @@
 package com.github.art5hur.sprint_3.lov;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,5 +34,9 @@ public class ListOfValueBuilder {
 				.map(c -> new ListOfValue(c.getId(), c.getNome()))
 				.toList();
 	}
+	
+	public List<String> getLovAreas() {
+        return Arrays.asList("Farmacêutica", "Gestão", "Tecnologia", "Qualidade", "Logística");
+    }
 
 }

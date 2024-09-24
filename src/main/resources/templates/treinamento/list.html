@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionarios</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/treinamento.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">    
+</head>
+<body>
+    <div class="header">
+        <h1>Lista de Treinamentos</h1>
+         
+         <a href="treinamentos/add" class="btn-sm btn-primary"><i class="fas fa-plus"></i></a>
+        
+        <div class="search-filter">
+            <input type="text" placeholder="Buscar por cursos..." class="search-bar" />
+            
+            <select class="filter">
+                <option value="todos">Todas as áreas</option>
+                <option value="farmaceutica">Farmacêutica</option>
+                <option value="tecnologia">Tecnologia</option>
+            </select>
+            
+            <button class="search-button">Pesquisar</button>
+            
+        </div>
+    </div>
+
+    <div class="course-grid">
+    <div class="course-card" th:each="treinamento : ${treinamentos}">
+        <div class="course-icon">
+            <img th:src="@{${treinamento.icone}}" alt="Ícone do Curso">
+        </div>
+        <h3 th:text="${treinamento.nome}">Nome do Treinamento</h3>
+        <p th:text="${treinamento.descricao}">Descrição do Treinamento</p>
+        <span th:text="${treinamento.data}">Data do Treinamento</span>
+    </div>
+</div>
+
+</body>
+</html>
